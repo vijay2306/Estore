@@ -1,0 +1,19 @@
+@using BOL;
+@{
+    ViewData["Title"] = "department Page";
+    
+}
+
+<h3>all department</h3>
+@{
+
+    List<Department> departments=ViewData["department"] as List<Department>;
+    foreach(Department dept in departments)
+    {
+        <ul> 
+            <li>@dept.Id</li>
+            <li>@dept.Name</li>
+            <li>@dept.Location</li>
+        </ul>
+    }
+}
